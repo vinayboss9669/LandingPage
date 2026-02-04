@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join Coderush - Developer Community</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background Elements -->
+    <div class="bg-grid"></div>
+    <div class="bg-particles"></div>
+    
+    <!-- Loader -->
+    <div class="loader" id="loader">
+        <div class="loader-container">
+            <div class="loader-spinner">
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+                <div class="spinner-circle"></div>
+                <div class="spinner-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+            </div>
+            <p class="loader-text">Initializing Coderush...</p>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Floating Particles Container -->
+        <div class="floating-particles">
+            <div class="particle particle-1"></div>
+            <div class="particle particle-2"></div>
+            <div class="particle particle-3"></div>
+            <div class="particle particle-4"></div>
+            <div class="particle particle-5"></div>
+        </div>
+        
+        <!-- Header with Animated Logo -->
+        <header class="header">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fas fa-code"></i>
+                </div>
+                <div class="logo-text">
+                    <span class="logo-main">Coderush</span>
+                    <span class="logo-sub">dev community</span>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Main Hero Section -->
+        <main class="main-content">
+            <!-- Animated Headline -->
+            <div class="headline-container">
+                <h1 class="headline">
+                    <span class="headline-word headline-word-1">Join</span>
+                    <span class="headline-word headline-word-2">Coderush</span>
+                    <span class="headline-emoji" id="rocket">🚀</span>
+                </h1>
+                <div class="headline-underline"></div>
+            </div>
+            
+            <!-- Animated Intro Text -->
+            <div class="intro-container">
+                <p class="intro-text" id="introText">
+                    <span class="intro-line intro-line-1">Build faster.</span>
+                    <span class="intro-line intro-line-2">Learn smarter.</span>
+                    <span class="intro-line intro-line-3">Grow together.</span>
+                </p>
+            </div>
+            
+            <!-- Animated Card -->
+            <div class="card" id="signupCard">
+                <!-- Card Header -->
+                <div class="card-header">
+                    <div class="card-icon">
+                        <i class="fas fa-user-plus"></i>
+                    </div>
+                    <div class="card-title">
+                        <h2>Start Your Journey</h2>
+                        <p class="card-subtitle">Join our community of 1000+ developers</p>
+                    </div>
+                </div>
+                
+                <!-- Card Content -->
+                <div class="card-content">
+                    <!-- Form -->
+                    <form id="signupForm" novalidate>
+                        <!-- Name Input -->
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" id="name" class="form-input" placeholder=" " required>
+                                <label for="name" class="input-label">Full Name</label>
+                                <div class="input-underline"></div>
+                            </div>
+                            <div class="error-message" id="nameError"></div>
+                        </div>
+                        
+                        <!-- Email Input -->
+                        <div class="input-group">
+                            <div class="input-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="input-container">
+                                <input type="email" id="email" class="form-input" placeholder=" " required>
+                                <label for="email" class="input-label">Email Address</label>
+                                <div class="input-underline"></div>
+                            </div>
+                            <div class="error-message" id="emailError"></div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-btn" id="submitBtn">
+                            <span class="btn-text" id="btnText">Join Coderush</span>
+                            <span class="btn-icon">
+                                <i class="fas fa-arrow-right"></i>
+                            </span>
+                            <div class="btn-spinner" id="btnSpinner">
+                                <div class="spinner-dot"></div>
+                                <div class="spinner-dot"></div>
+                                <div class="spinner-dot"></div>
+                            </div>
+                        </button>
+                    </form>
+                    
+                    <!-- Success Message -->
+                    <div class="success-message" id="successMessage">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <div class="success-content">
+                            <h3>Welcome to Coderush!</h3>
+                            <p>Your account has been created. Check your email for next steps.</p>
+                        </div>
+                        <div class="success-confetti"></div>
+                    </div>
+                </div>
+                
+                <!-- Card Footer -->
+                <div class="card-footer">
+                    <p class="card-footer-text">
+                        <i class="fas fa-shield-alt"></i>
+                        Your data is secure. We never share your information.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Animated Stats -->
+            <div class="stats-container">
+                <div class="stat">
+                    <div class="stat-number" id="devsCount">10,000+</div>
+                    <div class="stat-label">Developers</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="projectsCount">5000+</div>
+                    <div class="stat-label">Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number" id="countriesCount">120+</div>
+                    <div class="stat-label">Countries</div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- Footer -->
+        <footer class="footer">
+            <p class="footer-text">Made with <i class="fas fa-heart heart-beat"></i> for developers worldwide</p>
+            <p class="footer-copyright">&copy; <span id="currentYear"></span> Coderush. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
